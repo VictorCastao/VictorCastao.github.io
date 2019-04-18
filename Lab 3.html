@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lab 3</title>    
+    </head>
+    <body>
+        <p> x:<input type="text" id="x"></p>
+        <p> y:<input type="text" id="y"></p> 
+        <input id="soma" type="radio" name="op">Soma 
+        <input id="subtrai" type="radio" name="op">Subtrai
+        <input id="multiplica" type="radio" name="op">Multiplica
+        <input id="divide" type="radio" name="op">Divide   
+        <button type="button" onclick="operar()"> Resultado </button>
+        <p id="result"></p>
+        
+
+        <script>
+        function operar() {
+            var x = parseFloat(document.getElementById('x').value)
+            var y = parseFloat(document.getElementById('y').value)
+            var op;
+                if (document.getElementById('soma').checked == true) {
+                op = x + y
+                } else {
+            
+                if (document.getElementById('subtrai').checked == true){
+                op = x - y
+                } else {
+            
+                if (document.getElementById('multiplica').checked == true){
+                op = x * y
+                } else {
+            
+                if (document.getElementById('divide').checked == true){
+                op = x / y
+                } else {
+                    op = "Atenção! Selecione uma operação"
+                        }
+                    }
+                }   
+            }
+        
+        if (isNaN(op)&& !(typeof(op) == "string")) {
+            op = "Não é um número, verifique as entradas"
+        }
+    
+
+        
+
+            document.getElementById('result').innerHTML = op;
+            
+        }
+        </script>
+        
+        
+    
+    
+    
+    
+    
+    </body>
+</html>
