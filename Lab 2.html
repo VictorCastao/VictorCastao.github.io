@@ -3,61 +3,101 @@
     <head>
         <meta charset="UTF-8">
         <title>Lab 2</title>    
+    <style>
+    .titulo{
+        text-align: center;
+        font-family: Arial; 
+    }
+    .corpo{
+        background-color: rgb(255, 255, 255);
+    }
+    
+    
+    </style>
+    
     </head>
-    <body>
-        <h1>Questionário de Preferências</h1>
+    <body class="corpo">
+        <h1 class="titulo">Questionário Pessoal</h1>
        <form> 
-           Nome:
-           <input id="nome" name="firstname" type="text">
+           Nome Completo:
+           <input id="nome" name="nomecompleto" type="text" size="40">
 
-           <p>Data:
-           <input id="nome" name="firstname" type="date"></p>
-           <p>Imagem:
-                <input id="foto" name="foto" type="file" accept="image/png, image/jpg"> 
-           </p>
-       
+           <p>Data de Nascimento:
+           <input id="data" name="nascimento" type="date"></p>
+         
            <p>Gênero:
        <select id="gênero" name="gênero">    
             <option value="Masculino">Masculino</option>
             <option value="Feminino">Feminino</option>
-            <option value="Outros" selected>Não informado</option> 
+            <option value="Outros" selected>Prefiro não informar</option> 
         </select> </p>
-        
-        <p>Biografia: <br>
-        <textarea id="biografia" rows="10" cols="30">Escreva seu texto.       
-        </textarea> </p>
-        
-        <button type="button" onclick="alert('Prova de cálculo')">Da um toque</button> 
-        
-        <p>Tipo Sanguíneo:<br>
-        <label><input type="radio" name="ABO" value="A"> A </label>
-        <label><input type="radio" name="ABO" value="B"> B </label>
-        <label><input type="radio" name="ABO" value="O"> O </label>
-        <label><input type="radio" name="ABO" value="AB"> AB </label><br>
-        <label><input type="radio" name="RH" value="+"> + </label>
-        <label><input type="radio" name="RH" value="-"> - </label></p>
-        
-        <p>Qual desses você possui:<br>
-                <input type="checkbox" name="veiculo" value="Bicicleta"> bicicleta<br>
-                <input type="checkbox" name="veiculo" value="Carro"> carro<br>
-                <input type="checkbox" name="veiculo" value="caminhao" >Caminhão<br> 
-                <input type="checkbox" name="veiculo" value="nenhum" >Só os pés<br>
+
+        <p> Selecione seu tipo Sanguíneo:<br>
+            ABO:
+            <select id="abo" name="abo">    
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="AB">AB</option> 
+                    <option value="O">O</option>
+            </select>
+            
+            RH:
+            <select id="rh" name="rh">
+                <option value="-">Negativo</option>
+                <option value="+">Positivo</option>
+            </select> 
+
+
         </p>
 
-        <p>
-            Digite sua senha:<br>
-            <input type="password" name="senha"> 
+        <p>Qual seu gênero musical favorito?<br>
+            <input name="genero" type="radio" value="indie">Indie
+            <br><input name="genero" type="radio" value="rock" >Rock
+            <br><input name="genero" type="radio" value="sertanejo">Sertanejo
+            <br><input name="genero" type="radio" value="pop">Pop
+            <br><input name="genero" type="radio" value="gospel">Gospel
+            <br><input name="genero" type="radio" value="funk">Funk
+            <br><input name="genero" type="radio" value="outro">Outro
         </p>
-          
-        <p>
-                Range:<br>
-                <input type="range" min="0" max="12"> 
-            </p>
+        
+        <p>Qual sua operadora de telefone?<br>
+            <input name="operadora" type="radio" value="claro">Claro
+            <br><input name="operadora" type="radio" value="tim">Tim
+            <br><input name="operadora" type="radio" value="oi">Oi
+            <br><input name="operadora" type="radio" value="vivo">Vivo
+            <br><input name="operadora" type="radio" value="outro">Mais de uma / Outra
+
+        <p>Se tivesse uma única opção, quais desses filmes você escolheria?<br>
+                <input type="radio" name="filme" value="ultimato">Vingadores: Ultimato
+                <br><input type="radio" name="filme" value="leao">Rei Leão
+                <br><input type="radio" name="filme" value="xmen">X-men: Fênix Negra
+                <br><input type="radio" name="filme" value="jhon">John Wick 3
+
+        <p> Qauis dessas séries você acompanha?
+            <br><input name="serie" value="got" type="checkbox"> Game of Thrones
+            <br><input name="serie" value="twd" type="checkbox"> The Walking Dead
+            <br><input name="serie" value="svu" type="checkbox"> Law and Order: SVU
+            <br><input name="serie" value="supernatural" type="checkbox"> Supernatural
+            <br><input name="serie" value="greys" type="checkbox"> Grey's Anatomy
+            <br><input name="serie" value="nenhuma" type="checkbox"> Nenhuma das opções
+        </p>
+        
+        <p>Numa escala de 0 a 10, qual o seu nível de inglês?<br>
+            0<input type="range" max="10" min="0" step="1" value="0">10
+        </p>
+
+       
               
        
+        <p>Selecione uma foto 3x4:
+            <input id="foto" name="foto" type="file" accept="image/png, image/jpg"> 
+        </p>    
        
-       
-       
+        <p>Escreva uma minibiografia a seu respeito: <br>
+           <textarea id="biografia" rows="10" cols="50">Escreva aqui...       
+           </textarea> </p>
+           <button type="button" onclick="alert('Resposta enviada com sucesso')">Clique para enviar</button> 
+            
        
           
        
