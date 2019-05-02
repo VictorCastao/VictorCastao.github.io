@@ -1,13 +1,16 @@
-console.log("Respostas Desafios JS_001");
+console.log("Respostas Desafios JS_002");
 
 function Q1() {
     console.log('Q1');
     var x = Number.parseInt(document.getElementById('x').value);
     var y = Number.parseInt(document.getElementById('y').value);
-    console.log('Valor de X:' + x);
-    console.log('Valor de Y:' + y);
-    console.log('Quociente = ' + Math.floor(x/y));
-    console.log('Resto = ' + (x%y));
+    var resp = divide(x,y);
+    document.getElementById('RQ1').innerHTML = resp;
+    console.log(resp);
+}
+
+function divide(x,y){
+    return ('Valor de X: '+ x + '/' + 'Valor de Y: ' + y + '/' + 'Quociente = ' + Math.floor(x/y) + '/' + 'Resto = ' + (x%y))
 }
 
 function Q2() {
