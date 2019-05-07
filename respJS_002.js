@@ -10,7 +10,7 @@ function Q1() {
 }
 
 function divide(x,y){
-    return ('Valor de X: '+ x + '/' + 'Valor de Y: ' + y + '/' + 'Quociente = ' + Math.floor(x/y) + '/' + 'Resto = ' + (x%y))
+    return ('Valor de X: '+ x + '/' +  'Valor de Y: ' + y + '/' + 'Quociente = ' + Math.floor(x/y) + '/' + 'Resto = ' + (x%y))
 }
 
 function Q2() {
@@ -51,7 +51,7 @@ function profegenero(profissao){
     if (profissao.endsWith('a')){return('Profissão Escolhida: ' + profissao + '/' + 'Substantivo: Feminino')}
     else{    
         
-    return('Profissão Escolhida: ' + profissao + '/' + 'Substantivo: Ambos')
+    return('Profissão Escolhida: ' + profissao + '/' + 'Substantivo: Ambos os Gêneros')
                 }    
             }
         }
@@ -116,11 +116,13 @@ function Q5(){
         var peso = Number.parseFloat(document.getElementById('peso').value);
         var aux = document.getElementById('genero');
         var genero = aux.options[aux.selectedIndex].value;
-        var imc = peso / Math.pow(altura,2);
+        var imc = imccalc(peso,altura);
         var resp5 = calculo (altura,peso,genero,imc);
         document.getElementById('RQ5').innerHTML = resp5;
         console.log(resp5);
 }
+
+
 
 function calculo(altura,peso,genero,imc){   
         if ((!altura) || (!peso)){
@@ -164,5 +166,7 @@ function genclass(genero,imc){
 
 }
 
-
+function imccalc(peso,altura){
+    return (peso / Math.pow(altura,2))
+}
 
