@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <script src="Trabalho.js"></script>
+        <title>Testes Trabalho</title>
+    </head>
+
+<body>
+    <h1> Testes de Algoritmos</h1>
+    <p>OBS: Os valores decimais devem ser separados por ponto(".")</p>
+    <hr>
+    <h2> Algoritmo de Euclides (MDC) </h2>
+    <br>
+    <p>Valor 1: <input type="text" id="a"> </p>
+    <p>Valor 2: <input type="text" id="b"> </p>
+    <button type="button" onclick="T1()">Cálculo MDC</button>
+    <p id="T1">Sem Resposta</p>
+    <hr>
+
+    <h2> Cálculo de Tensão </h2>
+    <p>Informe os valores para obter a Tensão(V)</p>
+    <br>
+    <p>Resistência(Ohms): <input type="text" id="r-1"> </p>
+    <p>Corrente Elétrica(A):<input type="text" id="i-1"> </p>
+    <button type="button" onclick="T2()">Calcular Tensão</button>
+    <p id="T2">Sem Resposta</p>
+    <hr>
+    
+
+    <h2>Cálculo Equação do Segundo Grau</h2>
+    <p>OBS: Preencha os valores inexistentes com 0 e separe números decimais com "."</p>
+    <br>
+    <p><input size="2" type="text" id="x2">x² + <input size="2" type="text" id="x1"> x + <input size="2" type="text" id="lin"> = 0  </p>
+    <button type="button" onclick="T3()">Calcular Equação</button>
+    <p id="T3">Sem Resposta</p>
+    <hr>
+
+    <h2> Equação Geral dos Gases </h2>
+    <p>Informe os valores para obter a Pressão(atm)</p>
+    <br>
+    <p>Volume(l): <input type="text" id="vol"> </p>
+    <p>n° de Mols:<input type="text" id="mol"> </p>
+    <p>Temperatura(°C): <input type="text" id="temp"> </p>
+    <button type="button" onclick="T4()">Calcular Pressão</button>
+    <p id="T4">Sem Resposta</p>
+    <hr>
+
+
+    <h2> Quantidade de Calor </h2>
+    <p>Informe os valores para obter a Quantidade de Calor(cal)</p>
+    <br>
+    <p>Massa(g): <input type="text" id="m"> </p>
+    <p>Calor Específico(cal/g.°C):<input type="text" id="ce"> </p>
+    <p>Variação de Temperatura(°C): <input type="text" id="dt"> </p>
+    <button type="button" onclick="T5()">Calcular Valor</button>
+    <p id="T5">Sem Resposta</p>
+    <hr>
+
+    <h2> Energia Potencial Elástica </h2>
+    <p>Informe os valores para obter o valor da energia(J) </p>
+    <br>
+    <p>Constante Elástica(N/m): <input type="text" id="k"> </p>
+    <p>Deformação(m):<input type="text" id="def"> </p>
+    <button type="button" onclick="T6()">Calcular Energia</button>
+    <p id="T6">Sem Resposta</p>
+    <hr>
+
+    <h2> Frequência de Onda </h2>
+    <p>Informe os valores para obter a frequência(Hz) </p>
+    <br>
+    <p>Comprimento de Onda(m): <input type="text" id="lambda"> </p>
+    <p>Velocidade de Propagação(m/s): <input type="text" id="velp"> </p>
+    <button type="button" onclick="T7()">Calcular Frequência</button>
+    <p id="T7">Sem Resposta</p>
+    <hr>
+
+    <h2> Velocidade de Propagação </h2>
+    <p>Informe os valores para obter a Velocidade(m/s) </p>
+    <br>
+    <p>Comprimento de Onda(m): <input type="text" id="l2"> </p>
+    <p>Frequência(Hz):<input type="text" id="hz"> </p>
+    <button type="button" onclick="T8()">Calcular Velocidade</button>
+    <p id="T8">Sem Resposta</p>
+    <hr>
+
+    <h2> Equação de Torricelli</h2>
+    <p>Informe os valores para obter a velocidade final (m/s) </p>
+    <br>
+    <p>Velocidade Inicial(m/s): <input type="text" id="vo"> </p>
+    <p>Aceleração(m/s²):<input type="text" id="ac"> </p>
+    <p>Variação de Espaço(m): <input type="text" id="ds"> </p>
+    <button type="button" onclick="T9()">Calcular Velocidade</button>
+    <p id="T9">Sem Resposta</p>
+    <hr>
+
+    <h2> Concentração Molar </h2>
+    <p>Informe os valores para obter </p>
+    <br>
+    <p>N° de mols da substância: <input type="text" id="mol2"> </p>
+    <p>Volume(L):<input type="text" id="litros"> </p>
+    <button type="button" onclick="T10()">Calcular Concentração</button>
+    <p id="T10">Sem Resposta</p>
+    <hr>
+
+    <h2> Densidade </h2>
+    <p>Informe os valores para obter a Densidade </p>
+    <br>
+    <p>Massa (g): <input type="text" id="massa"> </p>
+    <p>Volume(L):<input type="text" id="litros2"> </p>
+    <button type="button" onclick="T11()">Calcular Densidade</button>
+    <p id="T11">Sem Resposta</p>
+    <hr>
+
+    <h2> Descobrir o termo n de uma PG </h2>
+    <p>Informe os valores para obter o termo </p>
+    <br>
+    <p>a1: <input type="text" id="primeiro"> </p>
+    <p>Valor de n:<input type="text" id="enesimo"> </p>
+    <p>Razão da PG: <input type="text" id="razao"> </p>
+    <button type="button" onclick="T12()">Descobrir Termo</button>
+    <p id="T12">Sem Resposta</p>
+    <hr>
+
+    <h2> Soma dos termos de uma PG </h2>
+    <p>Informe os valores para obter a soma </p>
+    <br>
+    <p>a1: <input type="text" id="pt"> </p>
+    <p>N° de termos:<input type="text" id="nt"> </p>
+    <p>Razão da PG: <input type="text" id="razao2"> </p>
+    <button type="button" onclick="T13()">Calcular Soma</button>
+    <p id="T13">Sem Resposta</p>
+    <hr>
+
+    <h2> Descobrir o termo n de uma PA </h2>
+    <p>Informe os valores para obter o termo </p>
+    <br>
+    <p>a1: <input type="text" id="pa1"> </p>
+    <p>Valor de n:<input type="text" id="pa2"> </p>
+    <p>Razão da PA: <input type="text" id="pa3"> </p>
+    <button type="button" onclick="T14()">Descobrir Termo</button>
+    <p id="T14">Sem Resposta</p>
+    <hr>
+
+    <h2> Soma dos termos de uma PA </h2>
+    <p>Informe os valores para obter a soma</p>
+    <br>
+    <p>a1: <input type="text" id="pa4"> </p>
+    <p>Valor do Enésimo Termo:<input type="text" id="pa5"> </p>
+    <p>N° de Termos: <input type="text" id="pa6"> </p>
+    <button type="button" onclick="T15()">Calcular Soma</button>
+    <p id="T15">Sem Resposta</p>
+    <hr>
+
+    <h2> Volume da Esfera </h2>
+    <p>Informe os valores para obter o Volume(m³) </p>
+    <br>
+    <p>Informe o raio(m): <input type="text" id="resf"> </p>
+    <button type="button" onclick="T16()">Calcular Volume</button>
+    <p id="T16">Sem Resposta</p>
+    <hr>
+
+    <h2> Cálculo de Potência </h2>
+    <p>Informe os valores para obter a Potência(W)</p>
+    <br>
+    <p>Corrente Elétrica(A): <input type="text" id="i-2"> </p>
+    <p>Tensão(V):<input type="text" id="u-1"> </p>
+    <button type="button" onclick="T17()">Calcular Potência</button>
+    <p id="T17">Sem Resposta</p>
+    <hr>
+
+    <h2> Cálculo de Energia Cinética </h2>
+    <p>Informe os valores para obter a Energia(J)</p>
+    <br>
+    <p>Massa(kg): <input type="text" id="mas"> </p>
+    <p>Velocidade(m/s):<input type="text" id="vms"> </p>
+    <button type="button" onclick="T18()">Calcular Energia</button>
+    <p id="T18">Sem Resposta</p>
+    <hr>
+    
+    <h2> Cálculo de Pressão </h2>
+    <p>Informe os valores para obter a Pressão(N/m²)</p>
+    <br>
+    <p>Força(N): <input type="text" id="f-1"> </p>
+    <p>Área(m²):<input type="text" id="a-1"> </p>
+    <button type="button" onclick="T19()">Calcular Pressão</button>
+    <p id="T19">Sem Resposta</p>
+    <hr>
+    
+    <h2> Cálculo de Energia Potencial Gravitacional </h2>
+    <p>Informe os valores para obter a Energia(J)</p>
+    <p>OBS: Para os cálculos, a Aceleração da Gravidade foi adotada como 10m/s²</p>
+    <br>
+    <p>Massa(kg): <input type="text" id="m-2"> </p>
+    <p>Altura(m):<input type="text" id="h-1"> </p>
+    <button type="button" onclick="T20()">Calcular Energia</button>
+    <p id="T20">Sem Resposta</p>
+    <hr>
+    
+    <h2> Cálculo da Força de Empuxo </h2>
+    <p>Informe os valores para obter a Força(N)</p>
+    <p>OBS: Para os cálculos, a Aceleração da Gravidade foi adotada como 10m/s²</p>
+    <br>
+    <p>Densidade do Líquido(kg/m³): <input type="text" id="D-líquido"> </p>
+    <p>Volume do Sólido Submerso(m³):<input type="text" id="vss"> </p>
+    <button type="button" onclick="T21()">Calcular Força</button>
+    <p id="T21">Sem Resposta</p>
+    <hr>
+
+    <h2> Cálculo de Espaço Final (M.U.V) </h2>
+    <p>Informe os valores para obter o Espaço Final(m)</p>
+    <br>
+    <p>Espaço Inicial(m): <input type="text" id="esp1"> </p>
+    <p>Velocidade Inicial(m/s):<input type="text" id="vo1"> </p>
+    <p>Instante t(s):<input type="text" id="temp1"> </p>
+    <p>Aceleração(m/s²):<input type="text" id="ac1"> </p>
+    <button type="button" onclick="T22()">Calcular Espaço Final</button>
+    <p id="T22">Sem Resposta</p>
+    <hr>
+
+    <h2> Concentração de uma mistura de soluções </h2>
+    <p>Informe os valores para obter a concentração(mol/l(m)</p>
+    <br>
+    <p>Concentração 1 (mol/l): <input type="text" id="con1"> </p>
+    <p>Volume 1 (l):<input type="text" id="vl1"> </p>
+    <p>Concentração 2 (mol/l):<input type="text" id="con2"> </p>
+    <p>Volume 2 (l):<input type="text" id="vl2"> </p>
+    <button type="button" onclick="T23()">Calcular Concentração Final</button>
+    <p id="T23">Sem Resposta</p>
+    <hr>
+
+    <h2> Diluição </h2>
+    <p>Informe os valores para obter a concentração(mol/l) após diluir</p>
+    <br>
+    <p>Concentração (mol/l): <input type="text" id="con3"> </p>
+    <p>Volume Inicial (l):<input type="text" id="vl4"> </p>
+    <p>Volume Final (l):<input type="text" id="vl3"> </p>
+    <button type="button" onclick="T24()">Calcular Concentração Final</button>
+    <p id="T24">Sem Resposta</p>
+    <hr>
+
+    <h2> Juros Compostos </h2>
+    <p>Informe os valores para obter o montante(R$)</p>
+    <br>
+    <p>Capital Inicial(R$): <input type="text" id="cin"> </p>
+    <p>Taxa de Juros(%a.d.):<input type="text" id="jur"> </p>
+    <p>N° de dias:<input type="text" id="tre"> </p>
+    <button type="button" onclick="T25()">Calcular Montante</button>
+    <p id="T25">Sem Resposta</p>
+    <hr>
+
+    <h2> Área de um Triangulo Equilátero </h2>
+    <p>Informe os valores para obter a área(m²)</p>
+    <br>
+    <p>Lado(m): <input type="text" id="Lado"> </p>
+    <button type="button" onclick="T26()">Calcular Área</button>
+    <p id="T26">Sem Resposta</p>
+    <hr>
+
+    <h2> Área de um Triangulo Isóceles </h2>
+    <p>Informe os valores para obter a área(m²)</p>
+    <br>
+    <p>Lado Diferente(m): <input type="text" id="ldif"> </p>
+    <p>Altura(m): <input type="text" id="alt"> </p>
+    <button type="button" onclick="T27()">Calcular Área</button>
+    <p id="T27">Sem Resposta</p>
+    <hr>
+
+    <h2> Área de um Trapézio </h2>
+    <p>Informe os valores para obter a área(m²)</p>
+    <br>
+    <p>Base Maior(m): <input type="text" id="Base Maior"> </p>
+    <p>Base Menor(m): <input type="text" id="Base Menor"> </p>
+    <p>Altura(m): <input type="text" id="Altura do Trapézio"> </p>
+    <button type="button" onclick="T28()">Calcular Área</button>
+    <p id="T28">Sem Resposta</p>
+    <hr>
+
+    <h2> Volume de um Paralelepípedo </h2>
+    <p>Informe os valores para obter o volume(m³)</p>
+    <br>
+    <p>Lado A(m): <input type="text" id="ladoa"> </p>
+    <p>Lado B(m): <input type="text" id="ladob"> </p>
+    <p>Lado C(m): <input type="text" id="ladoc"> </p>
+    <button type="button" onclick="T29()">Calcular Volume</button>
+    <p id="T29">Sem Resposta</p>
+    <hr>
+    
+
+
+</body>
