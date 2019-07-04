@@ -14,6 +14,8 @@ function Q1() {
 
 }
 
+// Código abaixo feito junto com o professor
+
 function Q2() {
     primos = [];
     console.log('Q2');
@@ -46,37 +48,37 @@ function acrescentar() {
     console.log(listaStrings);
 }
 
+// Código abaixo feito junto com o professor
+
 function Q3(){}
 
 
 function QuickSort_(X, IniVet, FimVet){
-    var i = 0;
-    var j = X.length - 1;
-    var pivo = X[Math.floor((i+j)/2)];
-    var aux;
 
-   while(i <= j){
-     while (X[i] < pivo){ 
-              i++;
-           }
-          
-          while (X[j] > pivo) {
-              j--;
-          }
-          if (i <= j) {
-              aux  = X[i];
-              X[i] = X[j];
-              X[j] = aux;
-              i++;
-              j--;
+    function partition(X, IniVet, FimVet){
+    var i = IniVet;
+    var pivo = X[FimVet];
+    var aux;
+    for (let j = IniVet; j < FimVet; j++){
+        if (X[j] < pivo) {
+            aux = X[i];
+            X[i] = X[j];
+            X[j] = aux;
+            i ++;
         }
-    }          
-   if (IniVet < j) {
-      QuickSort(X, IniVet, j);
     }
-   if (i < FimVet) {
-      QuickSort(X, i, FimVet);
-   }
+    aux = X[i];
+    X[i] = X[FimVet];
+    X[FimVet] = aux;
+    return i;
+    }
+   
+    var p;
+    if (IniVet < FimVet){
+        p = partition(X, IniVet, FimVet);
+        QuickSort_ (X, IniVet, p-1);
+        QuickSort_(X, p + 1, FimVet);   
+    }
 }
 
 function QuickSort(X){
@@ -97,5 +99,71 @@ function Q4(){
     ordenados=QuickSort(numerosQ4);
     console.log(ordenados);
     document.getElementById("RQ4").innerHTML=ordenados;
+}
+
+// Código abaixo feito junto com o professor
+
+var matrizA = [];
+var matrizB = [];
+function mostraMatriz(M) {
+	mhtml = "<table>";
+	for (let i = 0; i < M.length; i++) {
+		mhtml += "<tr><td>|</td>";
+		for (let j = 0; j < M[i].length; j++) {
+			mhtml += "<td style=\"text-align:right\">" + 
+				M[i][j] + "</td>";
+		}
+		mhtml += "<td>|</td></tr>";
+	}
+	mhtml += "</table>";
+	return mhtml;
+}
+
+function appendMA() {
+	var aux = (document.getElementById('linhaA').value).split(';');
+	document.getElementById('linhaA').value = "";
+	for (let i = 0; i < aux.length; i++) {
+		aux[i] = Number.parseFloat(aux[i]);
+	}
+	matrizA.push(aux);
+	console.log(matrizA);
+	document.getElementById('MA').innerHTML = mostraMatriz(matrizA);
+}
+
+function appendMB() {
+	var aux = (document.getElementById('linhaB').value).split(';');
+	document.getElementById('linhaB').value = "";
+	for (let i = 0; i < aux.length; i++) {
+		aux[i] = Number.parseFloat(aux[i]);
+	}
+	matrizB.push(aux);
+	console.log(matrizB);
+	document.getElementById('MB').innerHTML = mostraMatriz(matrizB);
+}
+
+function multMatrix(A, B) { // mxn nxp
+	var C = [];
+	for(let i = 0; i < A.length; i++) {
+		aux = [];
+		for(let j = 0; j < B[0].length; j++) {
+			aux.push(0);
+		}
+		C.push(aux);
+	}
+	for(let i = 0; i < A.length; i++) {
+		for(let j = 0; j < B[0].length; j++) {
+			for(let k = 0; k < B.length; k++) {
+				C[i][j] += A[i][k] * B[k][j];
+			}
+		}
+	}
+	return C;
+}
+
+function Q5() {
+    console.log('Q5');
+    var C = multMatrix(matrizA, matrizB);
+    console.log(C);
+    document.getElementById('RQ5').innerHTML = mostraMatriz(C);
 }
 
